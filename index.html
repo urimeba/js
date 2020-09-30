@@ -43,11 +43,47 @@
                 </div>
             </div>
 
-            <button class="btn btn-success">¡Revisar!</button>
+            <button class="btn btn-success" onclick="revisandoCadenas()">¡Revisar!</button>
 
 
         </div>
     </div>
+
+    <script>
+        revisandoCadenas = () => {
+            let respuesta = {};
+            let palabras = document.getElementById('palabras').value;
+            palabras = palabras.split(/\r?\n/);
+            palabras.forEach(palabra => {
+                let tamañoCadena = palabra.length;
+                let cadenaPar = "";
+                let cadenaNon = "";
+
+                for (let x = 0; x < tamañoCadena; x++) {
+                    let letra = palabra[x];
+                    if (x === 0 || x % 2 === 0) {
+                        cadenaPar += letra;
+                    } else {
+                        cadenaNon += letra;
+                    }
+                }
+
+                respuesta[palabra] = [cadenaPar, cadenaNon];
+            });
+
+            let contenedorResultado = document.getElementById('resultado');
+            contenedorResultado.innerHTML = "";
+            for (let palabra in respuesta) {
+                contenedorResultado.innerText += 'Palabra ingresada: ' + palabra + '\n';
+                contenedorResultado.innerText += 'Resultado: ' + respuesta[palabra][0] + " " + 
+                respuesta[palabra][1] + '\n\n';
+
+            }
+
+
+
+        }
+    </script>
 
 
 
