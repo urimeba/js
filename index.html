@@ -47,6 +47,45 @@
 
 
         </div>
+        <div id="colores" class="container d-flex flex-column justify-content-center align-items-center">
+            <hr>
+            <h1 class="display-4">Evento "onMouseOver"</h1>
+    
+            <p>Uso del evento "onMouseOver" para cambiar el color de fondo moviendo el ratón sobre la imagen</p>
+    
+            <a onmouseover="changecolor('white')">
+                <img style="border: 1px solid black;"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALcAAAETCAMAAABDSmfhAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlT3+AEVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8A8WoAAHxScUAAAAAAElFTkSuQmCC"
+                    width="20" vspace="10" hspace="10" height="20">
+            </a>
+    
+            <a onmouseover="changecolor('red')">
+                <img style="border: 1px solid black;"
+                    src="https://img.wallpapersafari.com/desktop/1920/1080/29/60/DB1jAi.jpg" width="20" vspace="10"
+                    hspace="10" height="20">
+            </a>
+    
+            <a onmouseover="changecolor('yellow')">
+                <img style="border: 1px solid black;"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP8AAADGCAMAAAAqo6adAAAABlBMVEX//wCzs5aaW17MAAAA3klEQVR4nO3PAQEAAAjDoNu/tEEYDdjN1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W39bf1t/W34b/H769AMf5McvaAAAAAElFTkSuQmCC"
+                    width="20" vspace="10" hspace="10" height="20">
+            </a>
+    
+            <a onmouseover="changecolor('green')">
+                <img style="border: 1px solid black;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Auto_Racing_Green.svg/1200px-Auto_Racing_Green.svg.png"
+                    width="20" vspace="10" hspace="10" height="20">
+            </a>
+    
+            <a onmouseover="changecolor('blue')">
+                <img style="border: 1px solid black;"
+                    src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/8/1/1375354802439/Blue---the-colour-008.jpg?width=700&quality=85&auto=format&fit=max&s=d8d0e02e14f045772be95f21c0a3dfcd"
+                    width="20" vspace="10" hspace="10" height="20">
+            </a>
+    
+            <hr>
+    
+        </div>
     </div>
 
     <script>
@@ -81,6 +120,10 @@
             }
 
 
+
+        }
+        changecolor = (color) => {
+            document.body.style.background = color;
 
         }
     </script>
